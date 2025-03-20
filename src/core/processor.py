@@ -5,6 +5,47 @@ import os
 import pandas as pd
 from typing import Dict, List, Optional, Any
 import logging
+import time
+from contextlib import contextmanager
+
+# Dicionário para armazenar métricas de tempo do processador
+METRICAS_TEMPO_PROCESSOR = {
+    'verificacao_duplicatas': [],
+    'tratamento_dados': [],
+    'backup': [],
+    'total': []
+}
+
+@contextmanager
+def timer(operacao: str):
+    """
+    Context manager para medir o tempo de execução de operações.
+    
+    Args:
+        operacao: Nome da operação sendo medida
+    """
+    start_time = time.time()
+    try:
+        yield
+    finally:
+        elapsed_time = time.time() - start_time
+        METRICAS_TEMPO_PROCESSOR[operacao].append(elapsed_time)
+
+def get_metricas_tempo_processor() -> Dict[str, Dict[str, float]]:
+    """
+    Retorna estatísticas das métricas de tempo do processador.
+    """
+    stats = {}
+    for operacao, tempos in METRICAS_TEMPO_PROCESSOR.items():
+        if tempos:
+            stats[operacao] = {
+                'media': sum(tempos) / len(tempos),
+                'min': min(tempos),
+                'max': max(tempos),
+                'total': sum(tempos),
+                'contagem': len(tempos)
+            }
+    return stats
 
 class DataProcessor:
     """
@@ -43,19 +84,37 @@ class DataProcessor:
             DataFrame processado ou None em caso de erro
         """
         try:
-            self.execution_logger.info(f"Iniciando processamento de dados para {self.table_name}")
-            
-            # Verificando e tratando duplicatas
-            df_processado = self._check_duplicatas(df)
-            
-            if df_processado is None or df_processado.empty:
-                self.data_logger.warning(f"Problemas no processamento de dados para {self.table_name}")
-                return None
-            
-            self.data_logger.info(f"Dados processados para {self.table_name}: {len(df_processado)} registros")
-            self.execution_logger.info(f"Processamento de dados para {self.table_name} finalizado com sucesso")
-            
-            return df_processado
+            with timer('total'):
+                self.execution_logger.info(f"Iniciando processamento de dados para {self.table_name}")
+                
+                # Verificando e tratando duplicatas
+                with timer('verificacao_duplicatas'):
+                    df_processado = self._check_duplicatas(df)
+                
+                if df_processado is None or df_processado.empty:
+                    self.data_logger.warning(f"Problemas no processamento de dados para {self.table_name}")
+                    return None
+                
+                # Tratamento adicional dos dados
+                with timer('tratamento_dados'):
+                    # Converte data para datetime e formata
+                    df_processado['Data'] = pd.to_datetime(df_processado['Data'])
+                    df_processado['Data'] = df_processado['Data'].dt.strftime('%Y-%m')
+                
+                self.data_logger.info(f"Dados processados para {self.table_name}: {len(df_processado)} registros")
+                
+                # Log das métricas de tempo
+                stats = get_metricas_tempo_processor()
+                self.execution_logger.info(f"Métricas de tempo para {self.table_name}:")
+                for operacao, metricas in stats.items():
+                    self.execution_logger.info(f"  {operacao}:")
+                    for metrica, valor in metricas.items():
+                        if isinstance(valor, (int, float)):
+                            self.execution_logger.info(f"    {metrica}: {valor:.2f} segundos")
+                        else:
+                            self.execution_logger.info(f"    {metrica}: {valor}")
+                
+                return df_processado
             
         except Exception as e:
             self.error_logger.error(f"Erro no processamento de dados para {self.table_name}", exc_info=True)
@@ -72,17 +131,18 @@ class DataProcessor:
             True se o backup foi criado com sucesso, False caso contrário
         """
         try:
-            self.execution_logger.info(f"Criando backup para {self.table_name}")
-            
-            # Garantir que o diretório de backup exista
-            os.makedirs('backup', exist_ok=True)
-            
-            # Salvando backup
-            backup_file_path = f'backup/{self.table_name}.csv'
-            df.to_csv(backup_file_path, index=False)
-            
-            self.execution_logger.info(f"Backup para {self.table_name} criado com sucesso")
-            return True
+            with timer('backup'):
+                self.execution_logger.info(f"Criando backup para {self.table_name}")
+                
+                # Garantir que o diretório de backup exista
+                os.makedirs('backup', exist_ok=True)
+                
+                # Salvando backup
+                backup_file_path = f'backup/{self.table_name}.csv'
+                df.to_csv(backup_file_path, index=False)
+                
+                self.execution_logger.info(f"Backup para {self.table_name} criado com sucesso")
+                return True
             
         except Exception as e:
             self.error_logger.error(f"Erro ao criar backup para {self.table_name}", exc_info=True)
@@ -103,6 +163,12 @@ class DataProcessor:
         
         self.execution_logger.info(f"Verificando duplicatas para {self.table_name}")
         
+        # Trata a coluna TP_FUNDO_CLASSE antes de qualquer outra operação
+        if 'TP_FUNDO_CLASSE' in df.columns:
+            # Converte para string e trata valores ausentes
+            df['TP_FUNDO_CLASSE'] = df['TP_FUNDO_CLASSE'].astype(str)
+            df['TP_FUNDO_CLASSE'] = df['TP_FUNDO_CLASSE'].replace({'nan': 'Sem Classificação', '': 'Sem Classificação'})
+        
         # Cria uma cópia da lista para não modificar a original
         p_keys_check = self.p_keys.copy()
         if 'TP_FUNDO_CLASSE' in p_keys_check:
@@ -116,7 +182,7 @@ class DataProcessor:
             
                 # Duplicatas sem TP_CLASSE_FUNDO
                 duplicados_sem_classe = duplicados_chave[
-                    duplicados_chave['TP_FUNDO_CLASSE'].isnull() | (duplicados_chave['TP_FUNDO_CLASSE'] == "")
+                    duplicados_chave['TP_FUNDO_CLASSE'] == 'Sem Classificação'
                 ]
                 
                 # Remove duplicatas SEM TP_FUNDO_CLASSE do DataFrame original
@@ -128,7 +194,7 @@ class DataProcessor:
 
                 # Duplicatas com TP_FUNDO_CLASSE preenchido
                 duplicados_com_classe = duplicados_chave[
-                    ~(duplicados_chave['TP_FUNDO_CLASSE'].isnull() | (duplicados_chave['TP_FUNDO_CLASSE'] == ""))
+                    duplicados_chave['TP_FUNDO_CLASSE'] != 'Sem Classificação'
                 ]
 
                 # Avalia se duplicatas com TP_FUNDO_CLASSE preenchido realmente diferem nesse campo
@@ -149,13 +215,7 @@ class DataProcessor:
                 self.execution_logger.info(f"Tratamento das duplicatas finalizado com sucesso para {self.table_name}")
             else:
                 self.execution_logger.info(f"Nenhuma duplicata detectada nas chaves primárias para {self.table_name}")
-
-            # Insere valor para termos Chaves Primárias não nulas
-            df['TP_FUNDO_CLASSE'] = df['TP_FUNDO_CLASSE'].fillna('Sem Classificação')
-            # Converte data para datetime
-            df['Data'] = pd.to_datetime(df['Data'])
-            # Data para yyyy-mm
-            df['Data'] = df['Data'].dt.strftime('%Y-%m')
+            
             return df
         else:
             self.data_logger.warning(f"DataFrame vazio para {self.table_name}")

@@ -1,0 +1,62 @@
+# Arquivos e diretórios do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Ambiente virtual
+venv/
+ENV/
+env/
+.env
+
+# Arquivos de dados e cache
+data/raw/
+data/database/
+data/processed/
+*.db
+*.sqlite
+*.sqlite3
+*.parquet
+*.csv
+cache/
+*.zip
+
+# Logs
+logs/
+*.log
+
+# Arquivos de backup
+backup/
+duplicatas/
+
+# IDEs e editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos específicos do projeto que não devem ser versionados
+config/credentials.py
+config/secrets.py 

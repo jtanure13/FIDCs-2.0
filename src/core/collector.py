@@ -95,11 +95,9 @@ class CvmDataCollector:
         # Configuração da barra de progresso
         total_meses = len(datas_a_baixar)
         if total_meses == 0:
-            print("🚫 Nenhum período para baixar.")
+            self.data_logger.warning("Nenhum período para baixar.")
             return None
             
-        print(f"📥 Baixando dados para {self.table_name}:")
-        
         with tqdm(total=total_meses, desc=f"Baixando {self.table_name}", unit="mês", leave=True) as pbar:
             for data in datas_a_baixar:
                 ano, mes = data.year, data.month
@@ -108,21 +106,25 @@ class CvmDataCollector:
                         f"{self.url_base}inf_mensal_fidc_{ano}{mes:02d}.zip",
                         f"{self.file_prefix}_{ano}{mes:02d}.csv"
                     )
-                    cnpj_col = 'CNPJ_FUNDO' if 'CNPJ_FUNDO' in df_novo.columns else 'CNPJ_FUNDO_CLASSE'
-                    df_novo.rename(columns={"DT_COMPTC": "Data", cnpj_col: 'CNPJ'}, inplace=True)
-                    dfs_novos.append(df_novo)
-                    # Atualiza a barra de progresso com informações
-                    pbar.set_postfix({"Status": "OK", "Registros": len(df_novo)})
+                    if df_novo is not None:
+                        cnpj_col = 'CNPJ_FUNDO' if 'CNPJ_FUNDO' in df_novo.columns else 'CNPJ_FUNDO_CLASSE'
+                        df_novo.rename(columns={"DT_COMPTC": "Data", cnpj_col: 'CNPJ'}, inplace=True)
+                        dfs_novos.append(df_novo)
+                        # Atualiza a barra de progresso com informações
+                        pbar.set_postfix({"Status": "OK", "Registros": len(df_novo)})
+                    else:
+                        pbar.set_postfix({"Status": "VAZIO"})
                 except Exception as e:
                     # Atualiza a barra de progresso com o erro
-                    pbar.set_postfix({"Status": "ERRO", "Mensagem": str(e)[:20]})
+                    pbar.set_postfix({"Status": "ERRO", "Mensagem": str(e)[:50]})
+                    self.error_logger.error(f"Erro ao baixar dados de {ano}/{mes:02d}: {str(e)}")
                 finally:
                     pbar.update(1)
 
         if not dfs_novos:
-            print("🚫 Nenhum dado novo.")
+            self.data_logger.warning("Nenhum dado novo encontrado.")
             return None
         
-        print(f"✅ Concluído: {len(dfs_novos)}/{total_meses} meses baixados para {self.table_name}.")
         df_novos = pd.concat(dfs_novos, ignore_index=True)
+        self.data_logger.info(f"Total de {len(df_novos)} registros baixados em {len(dfs_novos)}/{total_meses} meses.")
         return df_novos 
