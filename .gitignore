@@ -47,4 +47,8 @@ backup/
 # Test coverage
 .coverage
 htmlcov/
-.pytest_cache/ 
+.pytest_cache/
+
+# Database files
+*.db
+data/database/ 
