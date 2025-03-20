@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Arquivos e diretórios do Python
+=======
+# Python
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,6 +24,7 @@ wheels/
 .installed.cfg
 *.egg
 
+<<<<<<< HEAD
 # Ambiente virtual
 venv/
 ENV/
@@ -37,11 +42,24 @@ data/processed/
 *.csv
 cache/
 *.zip
+=======
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
 
 # Logs
 logs/
 *.log
 
+<<<<<<< HEAD
 # Arquivos de backup
 backup/
 duplicatas/
@@ -60,3 +78,22 @@ Thumbs.db
 # Arquivos específicos do projeto que não devem ser versionados
 config/credentials.py
 config/secrets.py 
+=======
+# Local development settings
+.env
+.env.local
+
+# Backup files
+backup/
+*.bak
+*.backup
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Database files
+*.db
+data/database/ 
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8

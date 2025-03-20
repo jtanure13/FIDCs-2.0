@@ -5,6 +5,7 @@ import os
 import pandas as pd
 from typing import Dict, List, Optional, Any
 import logging
+<<<<<<< HEAD
 import time
 from contextlib import contextmanager
 
@@ -46,6 +47,8 @@ def get_metricas_tempo_processor() -> Dict[str, Dict[str, float]]:
                 'contagem': len(tempos)
             }
     return stats
+=======
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
 
 class DataProcessor:
     """
@@ -84,6 +87,7 @@ class DataProcessor:
             DataFrame processado ou None em caso de erro
         """
         try:
+<<<<<<< HEAD
             with timer('total'):
                 self.execution_logger.info(f"Iniciando processamento de dados para {self.table_name}")
                 
@@ -115,6 +119,21 @@ class DataProcessor:
                             self.execution_logger.info(f"    {metrica}: {valor}")
                 
                 return df_processado
+=======
+            self.execution_logger.info(f"Iniciando processamento de dados para {self.table_name}")
+            
+            # Verificando e tratando duplicatas
+            df_processado = self._check_duplicatas(df)
+            
+            if df_processado is None or df_processado.empty:
+                self.data_logger.warning(f"Problemas no processamento de dados para {self.table_name}")
+                return None
+            
+            self.data_logger.info(f"Dados processados para {self.table_name}: {len(df_processado)} registros")
+            self.execution_logger.info(f"Processamento de dados para {self.table_name} finalizado com sucesso")
+            
+            return df_processado
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
             
         except Exception as e:
             self.error_logger.error(f"Erro no processamento de dados para {self.table_name}", exc_info=True)
@@ -131,6 +150,7 @@ class DataProcessor:
             True se o backup foi criado com sucesso, False caso contrário
         """
         try:
+<<<<<<< HEAD
             with timer('backup'):
                 self.execution_logger.info(f"Criando backup para {self.table_name}")
                 
@@ -143,6 +163,19 @@ class DataProcessor:
                 
                 self.execution_logger.info(f"Backup para {self.table_name} criado com sucesso")
                 return True
+=======
+            self.execution_logger.info(f"Criando backup para {self.table_name}")
+            
+            # Garantir que o diretório de backup exista
+            os.makedirs('backup', exist_ok=True)
+            
+            # Salvando backup
+            backup_file_path = f'backup/{self.table_name}.csv'
+            df.to_csv(backup_file_path, index=False)
+            
+            self.execution_logger.info(f"Backup para {self.table_name} criado com sucesso")
+            return True
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
             
         except Exception as e:
             self.error_logger.error(f"Erro ao criar backup para {self.table_name}", exc_info=True)
@@ -163,12 +196,15 @@ class DataProcessor:
         
         self.execution_logger.info(f"Verificando duplicatas para {self.table_name}")
         
+<<<<<<< HEAD
         # Trata a coluna TP_FUNDO_CLASSE antes de qualquer outra operação
         if 'TP_FUNDO_CLASSE' in df.columns:
             # Converte para string e trata valores ausentes
             df['TP_FUNDO_CLASSE'] = df['TP_FUNDO_CLASSE'].astype(str)
             df['TP_FUNDO_CLASSE'] = df['TP_FUNDO_CLASSE'].replace({'nan': 'Sem Classificação', '': 'Sem Classificação'})
         
+=======
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
         # Cria uma cópia da lista para não modificar a original
         p_keys_check = self.p_keys.copy()
         if 'TP_FUNDO_CLASSE' in p_keys_check:
@@ -182,7 +218,11 @@ class DataProcessor:
             
                 # Duplicatas sem TP_CLASSE_FUNDO
                 duplicados_sem_classe = duplicados_chave[
+<<<<<<< HEAD
                     duplicados_chave['TP_FUNDO_CLASSE'] == 'Sem Classificação'
+=======
+                    duplicados_chave['TP_FUNDO_CLASSE'].isnull() | (duplicados_chave['TP_FUNDO_CLASSE'] == "")
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
                 ]
                 
                 # Remove duplicatas SEM TP_FUNDO_CLASSE do DataFrame original
@@ -194,7 +234,11 @@ class DataProcessor:
 
                 # Duplicatas com TP_FUNDO_CLASSE preenchido
                 duplicados_com_classe = duplicados_chave[
+<<<<<<< HEAD
                     duplicados_chave['TP_FUNDO_CLASSE'] != 'Sem Classificação'
+=======
+                    ~(duplicados_chave['TP_FUNDO_CLASSE'].isnull() | (duplicados_chave['TP_FUNDO_CLASSE'] == ""))
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
                 ]
 
                 # Avalia se duplicatas com TP_FUNDO_CLASSE preenchido realmente diferem nesse campo
@@ -215,7 +259,17 @@ class DataProcessor:
                 self.execution_logger.info(f"Tratamento das duplicatas finalizado com sucesso para {self.table_name}")
             else:
                 self.execution_logger.info(f"Nenhuma duplicata detectada nas chaves primárias para {self.table_name}")
+<<<<<<< HEAD
             
+=======
+
+            # Insere valor para termos Chaves Primárias não nulas
+            df['TP_FUNDO_CLASSE'] = df['TP_FUNDO_CLASSE'].fillna('Sem Classificação')
+            # Converte data para datetime
+            df['Data'] = pd.to_datetime(df['Data'])
+            # Data para yyyy-mm
+            df['Data'] = df['Data'].dt.strftime('%Y-%m')
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
             return df
         else:
             self.data_logger.warning(f"DataFrame vazio para {self.table_name}")

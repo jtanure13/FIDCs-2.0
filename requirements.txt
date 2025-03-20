@@ -5,8 +5,12 @@ python-dotenv>=1.0.0
 openpyxl>=3.1.2
 numpy>=1.24.0
 pyodbc>=5.0.1
+<<<<<<< HEAD
 tqdm>=4.66.1
 requests-cache>=1.1.0
 tenacity>=8.2.0
 pyarrow>=14.0.1
 line-profiler>=4.1.1
+=======
+tqdm>=4.66.1
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8

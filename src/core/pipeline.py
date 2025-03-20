@@ -120,6 +120,11 @@ class FidcPipeline:
             total_tables = len(self.tables_config)
             successful_tables = 0
             
+<<<<<<< HEAD
+=======
+            print(f"🚀 Iniciando processamento de {total_tables} tabelas de FIDCs...\n")
+            
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
             # Iterando por cada arquivo/tabela com barra de progresso
             with tqdm(total=total_tables, desc="Processando tabelas", unit="tabela", leave=True) as pbar:
                 for table_config in self.tables_config:
@@ -132,6 +137,7 @@ class FidcPipeline:
                     # Atualizar status na barra de progresso
                     if success:
                         successful_tables += 1
+<<<<<<< HEAD
                         pbar.set_postfix({
                             "Status": "✓",
                             "Progresso": f"{successful_tables}/{total_tables}"
@@ -143,17 +149,37 @@ class FidcPipeline:
                         })
                     
                     pbar.update(1)
+=======
+                        pbar.set_postfix({"Status": "OK", "Total Sucesso": f"{successful_tables}/{total_tables}"})
+                    else:
+                        pbar.set_postfix({"Status": "FALHA", "Total Sucesso": f"{successful_tables}/{total_tables}"})
+                    
+                    pbar.update(1)
+                    print("")  # Linha em branco para separar as tabelas
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
             
             # Resumo final
             self.execution_logger.info(f"Execução do sistema finalizada: {successful_tables}/{total_tables} tabelas processadas com sucesso")
             
             if successful_tables == total_tables:
+<<<<<<< HEAD
                 self.execution_logger.info("Todas as tabelas foram processadas com sucesso.")
             else:
                 self.execution_logger.warning(f"{total_tables - successful_tables} tabelas não foram processadas corretamente.")
+=======
+                print(f"\n✅ Processamento concluído com sucesso! Todas as {total_tables} tabelas foram processadas.")
+            else:
+                print(f"\n⚠️ Processamento concluído: {successful_tables}/{total_tables} tabelas processadas com sucesso.")
+                print(f"   {total_tables - successful_tables} tabelas não foram processadas corretamente. Consulte os logs para mais detalhes.")
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
             
             return True
             
         except Exception as e:
             self.error_logger.error("Erro durante a execução do sistema", exc_info=True)
+<<<<<<< HEAD
+=======
+            print(f"\n❌ Erro durante a execução: {str(e)}")
+            print(f"❌ Erro durante a execução: {str(e)}")
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
             return False 

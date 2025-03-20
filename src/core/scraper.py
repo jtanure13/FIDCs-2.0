@@ -1,9 +1,14 @@
 """
+<<<<<<< HEAD
 Módulo para scraping de dados da CVM com otimizações de performance e tratamento de erros.
+=======
+Módulo para scraping de dados da CVM.
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
 """
 import pandas as pd
 import requests
 import zipfile
+<<<<<<< HEAD
 import gc
 from io import BytesIO
 from typing import Optional, List, Dict, Tuple, Set
@@ -75,6 +80,11 @@ def get_metricas_tempo() -> Dict[str, Dict[str, float]]:
                 'contagem': len(tempos)
             }
     return stats
+=======
+from io import BytesIO
+from typing import Optional, List
+from datetime import datetime
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
 
 # Dicionário que mapeia cada arquivo CSV ao seu nome de tabela
 ARQUIVOS_FONTE_PROCESSADO = {
@@ -97,6 +107,7 @@ ARQUIVOS_FONTE_PROCESSADO = {
     "inf_mensal_fidc_tab_X_7_": "Garantias e Seguros"
 }
 
+<<<<<<< HEAD
 # Colunas que não devem ser convertidas para categoria
 COLUNAS_NAO_CATEGORIA = {
     'CNPJ', 'CNPJ_ADMIN', 'CNPJ_GESTOR', 'CPF_CNPJ_COTISTA',
@@ -222,12 +233,24 @@ class CvmScraper:
     def baixar_extrair_csv(url: str, nome_arquivo: str) -> Optional[pd.DataFrame]:
         """
         Baixa e extrai um CSV de dentro de um arquivo ZIP com cache e otimizações.
+=======
+class CvmScraper:
+    """
+    Classe responsável pelo scraping de dados da CVM.
+    """
+    
+    @staticmethod
+    def baixar_extrair_csv(url: str, nome_arquivo: str) -> pd.DataFrame:
+        """
+        Baixa e extrai um CSV de dentro de um arquivo ZIP.
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
         
         Args:
             url: URL do arquivo ZIP a ser baixado
             nome_arquivo: Nome do arquivo CSV dentro do ZIP
             
         Returns:
+<<<<<<< HEAD
             DataFrame com os dados ou None se não houver dados ou ocorrer erro
         """
         cache_path = CvmScraper._get_cache_path(url, nome_arquivo)
@@ -292,11 +315,24 @@ class CvmScraper:
         except Exception as e:
             logger.error(f"Erro ao processar arquivo {url}: {str(e)}")
             return None
+=======
+            DataFrame contendo os dados do CSV
+        """
+        response = requests.get(url)
+        with zipfile.ZipFile(BytesIO(response.content)) as zip_ref:
+            with zip_ref.open(nome_arquivo) as file:
+                df = pd.read_csv(file, sep=';', encoding='latin1', low_memory=False)
+        return df
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
     
     @staticmethod
     def importa_dados(nome_arquivo_fonte: str, data_inicio: str = '2022-01-01') -> Optional[pd.DataFrame]:
         """
+<<<<<<< HEAD
         Importa dados de FIDCs da CVM para um período específico com otimizações.
+=======
+        Importa dados de FIDCs da CVM para um período específico.
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
         
         Args:
             nome_arquivo_fonte: Prefixo do nome do arquivo a ser baixado
@@ -305,6 +341,7 @@ class CvmScraper:
         Returns:
             DataFrame contendo os dados importados ou None se não houver dados
         """
+<<<<<<< HEAD
         start_time = time.time()
         registros_por_mes = {}
         total_registros = 0
@@ -400,3 +437,36 @@ class CvmScraper:
                         logger.info(f"    {metrica}: {valor:.2f} segundos")
                     else:
                         logger.info(f"    {metrica}: {valor}") 
+=======
+        # URL base
+        url_base = 'https://dados.cvm.gov.br/dados/FIDC/DOC/INF_MENSAL/DADOS/'
+
+        # Formatando data input para ser usada
+        data_inicio = pd.to_datetime(data_inicio)
+
+        # Datas a baixar
+        data_atual = pd.to_datetime("today").replace(day=1) - pd.DateOffset(days=1)
+        datas_a_baixar = pd.date_range(start=data_inicio, end=data_atual, freq='M')
+
+        # Loop para baixar arquivo de cada mês
+        dfs_novos = []
+        for data in datas_a_baixar:
+            ano, mes = data.year, data.month
+            try:
+                df_novo = CvmScraper.baixar_extrair_csv(
+                    f"{url_base}inf_mensal_fidc_{ano}{mes:02d}.zip",
+                    f"{nome_arquivo_fonte}_{ano}{mes:02d}.csv"
+                )
+                cnpj_col = 'CNPJ_FUNDO' if 'CNPJ_FUNDO' in df_novo.columns else 'CNPJ_FUNDO_CLASSE'
+                df_novo.rename(columns={"DT_COMPTC": "Data", cnpj_col: 'CNPJ'}, inplace=True)
+                dfs_novos.append(df_novo)
+            except Exception as e:
+                # Erro ao baixar será tratado pelo chamador
+                pass
+
+        if not dfs_novos:
+            return None
+        
+        df_novos = pd.concat(dfs_novos, ignore_index=True)
+        return df_novos 
+>>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
