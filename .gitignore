@@ -95,5 +95,5 @@ htmlcov/
 
 # Database files
 *.db
-data/database/ 
+data/database/*.db 
 >>>>>>> 24e81b5cb8f77a7693080e3f5a65d60a51c455f8
