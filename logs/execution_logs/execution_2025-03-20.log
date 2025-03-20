@@ -1,0 +1,250 @@
+[2025-03-20 00:27:47,840] [INFO] [pipeline] - Iniciando execução do sistema de coleta e processamento de FIDCs
+[2025-03-20 00:27:47,841] [INFO] [pipeline] - Diretórios base criados
+[2025-03-20 00:27:47,861] [INFO] [pipeline] - Iniciando processamento para tabela caracteristicas_fundo
+[2025-03-20 00:27:47,862] [INFO] [collector] - Iniciando coleta de dados para caracteristicas_fundo
+[2025-03-20 00:28:07,416] [INFO] [collector] - Coleta de dados para caracteristicas_fundo finalizada com sucesso
+[2025-03-20 00:28:07,416] [INFO] [processor] - Iniciando processamento de dados para caracteristicas_fundo
+[2025-03-20 00:28:07,418] [INFO] [processor] - Verificando duplicatas para caracteristicas_fundo
+[2025-03-20 00:28:07,482] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para caracteristicas_fundo
+[2025-03-20 00:28:07,487] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para caracteristicas_fundo
+[2025-03-20 00:28:07,883] [INFO] [processor] - Processamento de dados para caracteristicas_fundo finalizado com sucesso
+[2025-03-20 00:28:07,883] [INFO] [processor] - Criando backup para caracteristicas_fundo
+[2025-03-20 00:28:11,600] [INFO] [processor] - Backup para caracteristicas_fundo criado com sucesso
+[2025-03-20 00:28:11,604] [INFO] [database] - Tabela caracteristicas_fundo criada/atualizada no banco de dados
+[2025-03-20 00:28:24,331] [INFO] [database] - Dados deletados e inseridos na tabela caracteristicas_fundo para os meses baixados
+[2025-03-20 00:28:24,331] [INFO] [pipeline] - Processamento para tabela caracteristicas_fundo finalizado com sucesso
+[2025-03-20 00:28:24,355] [INFO] [pipeline] - Iniciando processamento para tabela patrimonio_liquido
+[2025-03-20 00:28:24,355] [INFO] [collector] - Iniciando coleta de dados para patrimonio_liquido
+[2025-03-20 00:28:39,732] [INFO] [collector] - Coleta de dados para patrimonio_liquido finalizada com sucesso
+[2025-03-20 00:28:39,733] [INFO] [processor] - Iniciando processamento de dados para patrimonio_liquido
+[2025-03-20 00:28:39,733] [INFO] [processor] - Verificando duplicatas para patrimonio_liquido
+[2025-03-20 00:28:39,752] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para patrimonio_liquido
+[2025-03-20 00:28:39,753] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para patrimonio_liquido
+[2025-03-20 00:28:40,128] [INFO] [processor] - Processamento de dados para patrimonio_liquido finalizado com sucesso
+[2025-03-20 00:28:40,128] [INFO] [processor] - Criando backup para patrimonio_liquido
+[2025-03-20 00:28:40,506] [INFO] [processor] - Backup para patrimonio_liquido criado com sucesso
+[2025-03-20 00:28:40,508] [INFO] [database] - Tabela patrimonio_liquido criada/atualizada no banco de dados
+[2025-03-20 00:28:44,480] [INFO] [database] - Dados deletados e inseridos na tabela patrimonio_liquido para os meses baixados
+[2025-03-20 00:28:44,480] [INFO] [pipeline] - Processamento para tabela patrimonio_liquido finalizado com sucesso
+[2025-03-20 00:28:44,488] [INFO] [pipeline] - Iniciando processamento para tabela carteira_ativos
+[2025-03-20 00:28:44,488] [INFO] [collector] - Iniciando coleta de dados para carteira_ativos
+[2025-03-20 00:29:03,265] [INFO] [collector] - Coleta de dados para carteira_ativos finalizada com sucesso
+[2025-03-20 00:29:03,265] [INFO] [processor] - Iniciando processamento de dados para carteira_ativos
+[2025-03-20 00:29:03,265] [INFO] [processor] - Verificando duplicatas para carteira_ativos
+[2025-03-20 00:29:03,288] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para carteira_ativos
+[2025-03-20 00:29:03,290] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para carteira_ativos
+[2025-03-20 00:29:03,647] [INFO] [processor] - Processamento de dados para carteira_ativos finalizado com sucesso
+[2025-03-20 00:29:03,647] [INFO] [processor] - Criando backup para carteira_ativos
+[2025-03-20 00:29:05,047] [INFO] [processor] - Backup para carteira_ativos criado com sucesso
+[2025-03-20 00:29:05,050] [INFO] [database] - Tabela carteira_ativos criada/atualizada no banco de dados
+[2025-03-20 00:29:08,663] [INFO] [database] - Dados deletados e inseridos na tabela carteira_ativos para os meses baixados
+[2025-03-20 00:29:08,664] [INFO] [pipeline] - Processamento para tabela carteira_ativos finalizado com sucesso
+[2025-03-20 00:29:08,672] [INFO] [pipeline] - Iniciando processamento para tabela passivos_derivativos
+[2025-03-20 00:29:08,672] [INFO] [collector] - Iniciando coleta de dados para passivos_derivativos
+[2025-03-20 00:29:24,913] [INFO] [collector] - Coleta de dados para passivos_derivativos finalizada com sucesso
+[2025-03-20 00:29:24,913] [INFO] [processor] - Iniciando processamento de dados para passivos_derivativos
+[2025-03-20 00:29:24,913] [INFO] [processor] - Verificando duplicatas para passivos_derivativos
+[2025-03-20 00:29:24,936] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para passivos_derivativos
+[2025-03-20 00:29:24,937] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para passivos_derivativos
+[2025-03-20 00:29:25,329] [INFO] [processor] - Processamento de dados para passivos_derivativos finalizado com sucesso
+[2025-03-20 00:29:25,329] [INFO] [processor] - Criando backup para passivos_derivativos
+[2025-03-20 00:29:25,951] [INFO] [processor] - Backup para passivos_derivativos criado com sucesso
+[2025-03-20 00:29:25,952] [INFO] [database] - Tabela passivos_derivativos criada/atualizada no banco de dados
+[2025-03-20 00:29:29,164] [INFO] [database] - Dados deletados e inseridos na tabela passivos_derivativos para os meses baixados
+[2025-03-20 00:29:29,164] [INFO] [pipeline] - Processamento para tabela passivos_derivativos finalizado com sucesso
+[2025-03-20 00:29:29,173] [INFO] [pipeline] - Iniciando processamento para tabela prazos_creditos
+[2025-03-20 00:29:29,173] [INFO] [collector] - Iniciando coleta de dados para prazos_creditos
+[2025-03-20 00:29:46,445] [INFO] [collector] - Coleta de dados para prazos_creditos finalizada com sucesso
+[2025-03-20 00:29:46,445] [INFO] [processor] - Iniciando processamento de dados para prazos_creditos
+[2025-03-20 00:29:46,446] [INFO] [processor] - Verificando duplicatas para prazos_creditos
+[2025-03-20 00:29:46,470] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para prazos_creditos
+[2025-03-20 00:29:46,471] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para prazos_creditos
+[2025-03-20 00:29:46,841] [INFO] [processor] - Processamento de dados para prazos_creditos finalizado com sucesso
+[2025-03-20 00:29:46,841] [INFO] [processor] - Criando backup para prazos_creditos
+[2025-03-20 00:29:48,382] [INFO] [processor] - Backup para prazos_creditos criado com sucesso
+[2025-03-20 00:29:48,385] [INFO] [database] - Tabela prazos_creditos criada/atualizada no banco de dados
+[2025-03-20 00:29:52,242] [INFO] [database] - Dados deletados e inseridos na tabela prazos_creditos para os meses baixados
+[2025-03-20 00:29:52,242] [INFO] [pipeline] - Processamento para tabela prazos_creditos finalizado com sucesso
+[2025-03-20 00:29:52,252] [INFO] [pipeline] - Iniciando processamento para tabela inadimplencia
+[2025-03-20 00:29:52,252] [INFO] [collector] - Iniciando coleta de dados para inadimplencia
+[2025-03-20 00:30:11,167] [INFO] [collector] - Coleta de dados para inadimplencia finalizada com sucesso
+[2025-03-20 00:30:11,167] [INFO] [processor] - Iniciando processamento de dados para inadimplencia
+[2025-03-20 00:30:11,167] [INFO] [processor] - Verificando duplicatas para inadimplencia
+[2025-03-20 00:30:11,192] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para inadimplencia
+[2025-03-20 00:30:11,194] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para inadimplencia
+[2025-03-20 00:30:11,582] [INFO] [processor] - Processamento de dados para inadimplencia finalizado com sucesso
+[2025-03-20 00:30:11,582] [INFO] [processor] - Criando backup para inadimplencia
+[2025-03-20 00:30:13,065] [INFO] [processor] - Backup para inadimplencia criado com sucesso
+[2025-03-20 00:30:13,067] [INFO] [database] - Tabela inadimplencia criada/atualizada no banco de dados
+[2025-03-20 00:30:16,866] [INFO] [database] - Dados deletados e inseridos na tabela inadimplencia para os meses baixados
+[2025-03-20 00:30:16,866] [INFO] [pipeline] - Processamento para tabela inadimplencia finalizado com sucesso
+[2025-03-20 00:30:16,876] [INFO] [pipeline] - Iniciando processamento para tabela cedentes_tomadores
+[2025-03-20 00:30:16,876] [INFO] [collector] - Iniciando coleta de dados para cedentes_tomadores
+[2025-03-20 00:30:34,727] [INFO] [collector] - Coleta de dados para cedentes_tomadores finalizada com sucesso
+[2025-03-20 00:30:34,727] [INFO] [processor] - Iniciando processamento de dados para cedentes_tomadores
+[2025-03-20 00:30:34,728] [INFO] [processor] - Verificando duplicatas para cedentes_tomadores
+[2025-03-20 00:30:34,756] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para cedentes_tomadores
+[2025-03-20 00:30:34,759] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para cedentes_tomadores
+[2025-03-20 00:30:35,176] [INFO] [processor] - Processamento de dados para cedentes_tomadores finalizado com sucesso
+[2025-03-20 00:30:35,176] [INFO] [processor] - Criando backup para cedentes_tomadores
+[2025-03-20 00:30:36,467] [INFO] [processor] - Backup para cedentes_tomadores criado com sucesso
+[2025-03-20 00:30:36,469] [INFO] [database] - Tabela cedentes_tomadores criada/atualizada no banco de dados
+[2025-03-20 00:30:40,117] [INFO] [database] - Dados deletados e inseridos na tabela cedentes_tomadores para os meses baixados
+[2025-03-20 00:30:40,117] [INFO] [pipeline] - Processamento para tabela cedentes_tomadores finalizado com sucesso
+[2025-03-20 00:30:40,128] [INFO] [pipeline] - Iniciando processamento para tabela precos_mercado
+[2025-03-20 00:30:40,128] [INFO] [collector] - Iniciando coleta de dados para precos_mercado
+[2025-03-20 00:30:59,686] [INFO] [collector] - Coleta de dados para precos_mercado finalizada com sucesso
+[2025-03-20 00:30:59,686] [INFO] [processor] - Iniciando processamento de dados para precos_mercado
+[2025-03-20 00:30:59,686] [INFO] [processor] - Verificando duplicatas para precos_mercado
+[2025-03-20 00:30:59,729] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para precos_mercado
+[2025-03-20 00:30:59,732] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para precos_mercado
+[2025-03-20 00:31:00,130] [INFO] [processor] - Processamento de dados para precos_mercado finalizado com sucesso
+[2025-03-20 00:31:00,130] [INFO] [processor] - Criando backup para precos_mercado
+[2025-03-20 00:31:02,752] [INFO] [processor] - Backup para precos_mercado criado com sucesso
+[2025-03-20 00:31:02,757] [INFO] [database] - Tabela precos_mercado criada/atualizada no banco de dados
+[2025-03-20 00:31:07,298] [INFO] [database] - Dados deletados e inseridos na tabela precos_mercado para os meses baixados
+[2025-03-20 00:31:07,298] [INFO] [pipeline] - Processamento para tabela precos_mercado finalizado com sucesso
+[2025-03-20 00:31:07,313] [INFO] [pipeline] - Iniciando processamento para tabela risco_credito
+[2025-03-20 00:31:07,313] [INFO] [collector] - Iniciando coleta de dados para risco_credito
+[2025-03-20 00:31:23,400] [INFO] [collector] - Coleta de dados para risco_credito finalizada com sucesso
+[2025-03-20 00:31:23,400] [INFO] [processor] - Iniciando processamento de dados para risco_credito
+[2025-03-20 00:31:23,400] [INFO] [processor] - Verificando duplicatas para risco_credito
+[2025-03-20 00:31:23,414] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para risco_credito
+[2025-03-20 00:31:23,416] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para risco_credito
+[2025-03-20 00:31:23,640] [INFO] [processor] - Processamento de dados para risco_credito finalizado com sucesso
+[2025-03-20 00:31:23,640] [INFO] [processor] - Criando backup para risco_credito
+[2025-03-20 00:31:24,188] [INFO] [processor] - Backup para risco_credito criado com sucesso
+[2025-03-20 00:31:24,190] [INFO] [database] - Tabela risco_credito criada/atualizada no banco de dados
+[2025-03-20 00:31:24,580] [INFO] [database] - Dados deletados e inseridos na tabela risco_credito para os meses baixados
+[2025-03-20 00:31:24,580] [INFO] [pipeline] - Processamento para tabela risco_credito finalizado com sucesso
+[2025-03-20 00:31:24,586] [INFO] [pipeline] - Iniciando processamento para tabela classes_cotistas
+[2025-03-20 00:31:24,586] [INFO] [collector] - Iniciando coleta de dados para classes_cotistas
+[2025-03-20 00:31:42,227] [INFO] [collector] - Coleta de dados para classes_cotistas finalizada com sucesso
+[2025-03-20 00:31:42,227] [INFO] [processor] - Iniciando processamento de dados para classes_cotistas
+[2025-03-20 00:31:42,227] [INFO] [processor] - Verificando duplicatas para classes_cotistas
+[2025-03-20 00:31:42,317] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para classes_cotistas
+[2025-03-20 00:31:42,348] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para classes_cotistas
+[2025-03-20 00:31:43,625] [INFO] [processor] - Processamento de dados para classes_cotistas finalizado com sucesso
+[2025-03-20 00:31:43,625] [INFO] [processor] - Criando backup para classes_cotistas
+[2025-03-20 00:31:44,597] [INFO] [processor] - Backup para classes_cotistas criado com sucesso
+[2025-03-20 00:31:44,598] [INFO] [database] - Tabela classes_cotistas criada/atualizada no banco de dados
+[2025-03-20 00:31:53,848] [INFO] [database] - Dados deletados e inseridos na tabela classes_cotistas para os meses baixados
+[2025-03-20 00:31:53,848] [INFO] [pipeline] - Processamento para tabela classes_cotistas finalizado com sucesso
+[2025-03-20 00:31:53,863] [INFO] [pipeline] - Iniciando processamento para tabela distribuicao_cotistas
+[2025-03-20 00:31:53,863] [INFO] [collector] - Iniciando coleta de dados para distribuicao_cotistas
+[2025-03-20 00:32:10,840] [INFO] [collector] - Coleta de dados para distribuicao_cotistas finalizada com sucesso
+[2025-03-20 00:32:10,840] [INFO] [processor] - Iniciando processamento de dados para distribuicao_cotistas
+[2025-03-20 00:32:10,840] [INFO] [processor] - Verificando duplicatas para distribuicao_cotistas
+[2025-03-20 00:32:10,869] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para distribuicao_cotistas
+[2025-03-20 00:32:10,870] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para distribuicao_cotistas
+[2025-03-20 00:32:11,280] [INFO] [processor] - Processamento de dados para distribuicao_cotistas finalizado com sucesso
+[2025-03-20 00:32:11,280] [INFO] [processor] - Criando backup para distribuicao_cotistas
+[2025-03-20 00:32:12,168] [INFO] [processor] - Backup para distribuicao_cotistas criado com sucesso
+[2025-03-20 00:32:12,170] [INFO] [database] - Tabela distribuicao_cotistas criada/atualizada no banco de dados
+[2025-03-20 00:32:15,446] [INFO] [database] - Dados deletados e inseridos na tabela distribuicao_cotistas para os meses baixados
+[2025-03-20 00:32:15,447] [INFO] [pipeline] - Processamento para tabela distribuicao_cotistas finalizado com sucesso
+[2025-03-20 00:32:15,458] [INFO] [pipeline] - Iniciando processamento para tabela cotas_valores
+[2025-03-20 00:32:15,458] [INFO] [collector] - Iniciando coleta de dados para cotas_valores
+[2025-03-20 00:32:32,556] [INFO] [collector] - Coleta de dados para cotas_valores finalizada com sucesso
+[2025-03-20 00:32:32,556] [INFO] [processor] - Iniciando processamento de dados para cotas_valores
+[2025-03-20 00:32:32,556] [INFO] [processor] - Verificando duplicatas para cotas_valores
+[2025-03-20 00:32:32,644] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para cotas_valores
+[2025-03-20 00:32:32,675] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para cotas_valores
+[2025-03-20 00:32:33,811] [INFO] [processor] - Processamento de dados para cotas_valores finalizado com sucesso
+[2025-03-20 00:32:33,811] [INFO] [processor] - Criando backup para cotas_valores
+[2025-03-20 00:32:34,931] [INFO] [processor] - Backup para cotas_valores criado com sucesso
+[2025-03-20 00:32:34,932] [INFO] [database] - Tabela cotas_valores criada/atualizada no banco de dados
+[2025-03-20 00:32:43,946] [INFO] [database] - Dados deletados e inseridos na tabela cotas_valores para os meses baixados
+[2025-03-20 00:32:43,946] [INFO] [pipeline] - Processamento para tabela cotas_valores finalizado com sucesso
+[2025-03-20 00:32:43,962] [INFO] [pipeline] - Iniciando processamento para tabela rentabilidade
+[2025-03-20 00:32:43,962] [INFO] [collector] - Iniciando coleta de dados para rentabilidade
+[2025-03-20 00:33:01,524] [INFO] [collector] - Coleta de dados para rentabilidade finalizada com sucesso
+[2025-03-20 00:33:01,524] [INFO] [processor] - Iniciando processamento de dados para rentabilidade
+[2025-03-20 00:33:01,524] [INFO] [processor] - Verificando duplicatas para rentabilidade
+[2025-03-20 00:33:01,610] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para rentabilidade
+[2025-03-20 00:33:01,643] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para rentabilidade
+[2025-03-20 00:33:02,874] [INFO] [processor] - Processamento de dados para rentabilidade finalizado com sucesso
+[2025-03-20 00:33:02,874] [INFO] [processor] - Criando backup para rentabilidade
+[2025-03-20 00:33:03,913] [INFO] [processor] - Backup para rentabilidade criado com sucesso
+[2025-03-20 00:33:03,914] [INFO] [database] - Tabela rentabilidade criada/atualizada no banco de dados
+[2025-03-20 00:33:13,713] [INFO] [database] - Dados deletados e inseridos na tabela rentabilidade para os meses baixados
+[2025-03-20 00:33:13,713] [INFO] [pipeline] - Processamento para tabela rentabilidade finalizado com sucesso
+[2025-03-20 00:33:13,729] [INFO] [pipeline] - Iniciando processamento para tabela operacoes_estruturadas
+[2025-03-20 00:33:13,729] [INFO] [collector] - Iniciando coleta de dados para operacoes_estruturadas
+[2025-03-20 00:33:35,054] [INFO] [collector] - Coleta de dados para operacoes_estruturadas finalizada com sucesso
+[2025-03-20 00:33:35,054] [INFO] [processor] - Iniciando processamento de dados para operacoes_estruturadas
+[2025-03-20 00:33:35,054] [INFO] [processor] - Verificando duplicatas para operacoes_estruturadas
+[2025-03-20 00:33:35,400] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para operacoes_estruturadas
+[2025-03-20 00:33:35,513] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para operacoes_estruturadas
+[2025-03-20 00:33:39,872] [INFO] [processor] - Processamento de dados para operacoes_estruturadas finalizado com sucesso
+[2025-03-20 00:33:39,872] [INFO] [processor] - Criando backup para operacoes_estruturadas
+[2025-03-20 00:33:44,145] [INFO] [processor] - Backup para operacoes_estruturadas criado com sucesso
+[2025-03-20 00:33:44,147] [INFO] [database] - Tabela operacoes_estruturadas criada/atualizada no banco de dados
+[2025-03-20 00:34:20,077] [INFO] [database] - Dados deletados e inseridos na tabela operacoes_estruturadas para os meses baixados
+[2025-03-20 00:34:20,078] [INFO] [pipeline] - Processamento para tabela operacoes_estruturadas finalizado com sucesso
+[2025-03-20 00:34:20,119] [INFO] [pipeline] - Iniciando processamento para tabela liquidez_ativos
+[2025-03-20 00:34:20,119] [INFO] [collector] - Iniciando coleta de dados para liquidez_ativos
+[2025-03-20 00:34:36,138] [INFO] [collector] - Coleta de dados para liquidez_ativos finalizada com sucesso
+[2025-03-20 00:34:36,138] [INFO] [processor] - Iniciando processamento de dados para liquidez_ativos
+[2025-03-20 00:34:36,139] [INFO] [processor] - Verificando duplicatas para liquidez_ativos
+[2025-03-20 00:34:36,158] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para liquidez_ativos
+[2025-03-20 00:34:36,160] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para liquidez_ativos
+[2025-03-20 00:34:36,555] [INFO] [processor] - Processamento de dados para liquidez_ativos finalizado com sucesso
+[2025-03-20 00:34:36,555] [INFO] [processor] - Criando backup para liquidez_ativos
+[2025-03-20 00:34:37,055] [INFO] [processor] - Backup para liquidez_ativos criado com sucesso
+[2025-03-20 00:34:37,056] [INFO] [database] - Tabela liquidez_ativos criada/atualizada no banco de dados
+[2025-03-20 00:34:39,965] [INFO] [database] - Dados deletados e inseridos na tabela liquidez_ativos para os meses baixados
+[2025-03-20 00:34:39,965] [INFO] [pipeline] - Processamento para tabela liquidez_ativos finalizado com sucesso
+[2025-03-20 00:34:39,974] [INFO] [pipeline] - Iniciando processamento para tabela performance_fundo
+[2025-03-20 00:34:39,974] [INFO] [collector] - Iniciando coleta de dados para performance_fundo
+[2025-03-20 00:34:57,317] [INFO] [collector] - Coleta de dados para performance_fundo finalizada com sucesso
+[2025-03-20 00:34:57,317] [INFO] [processor] - Iniciando processamento de dados para performance_fundo
+[2025-03-20 00:34:57,318] [INFO] [processor] - Verificando duplicatas para performance_fundo
+[2025-03-20 00:34:57,396] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para performance_fundo
+[2025-03-20 00:34:57,421] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para performance_fundo
+[2025-03-20 00:34:58,507] [INFO] [processor] - Processamento de dados para performance_fundo finalizado com sucesso
+[2025-03-20 00:34:58,507] [INFO] [processor] - Criando backup para performance_fundo
+[2025-03-20 00:34:59,547] [INFO] [processor] - Backup para performance_fundo criado com sucesso
+[2025-03-20 00:34:59,549] [INFO] [database] - Tabela performance_fundo criada/atualizada no banco de dados
+[2025-03-20 00:35:08,165] [INFO] [database] - Dados deletados e inseridos na tabela performance_fundo para os meses baixados
+[2025-03-20 00:35:08,165] [INFO] [pipeline] - Processamento para tabela performance_fundo finalizado com sucesso
+[2025-03-20 00:35:08,182] [INFO] [pipeline] - Iniciando processamento para tabela garantias_seguros
+[2025-03-20 00:35:08,183] [INFO] [collector] - Iniciando coleta de dados para garantias_seguros
+[2025-03-20 00:35:26,561] [INFO] [collector] - Coleta de dados para garantias_seguros finalizada com sucesso
+[2025-03-20 00:35:26,561] [INFO] [processor] - Iniciando processamento de dados para garantias_seguros
+[2025-03-20 00:35:26,561] [INFO] [processor] - Verificando duplicatas para garantias_seguros
+[2025-03-20 00:35:26,582] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para garantias_seguros
+[2025-03-20 00:35:26,583] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para garantias_seguros
+[2025-03-20 00:35:26,954] [INFO] [processor] - Processamento de dados para garantias_seguros finalizado com sucesso
+[2025-03-20 00:35:26,954] [INFO] [processor] - Criando backup para garantias_seguros
+[2025-03-20 00:35:27,262] [INFO] [processor] - Backup para garantias_seguros criado com sucesso
+[2025-03-20 00:35:27,263] [INFO] [database] - Tabela garantias_seguros criada/atualizada no banco de dados
+[2025-03-20 00:35:29,984] [INFO] [database] - Dados deletados e inseridos na tabela garantias_seguros para os meses baixados
+[2025-03-20 00:35:29,984] [INFO] [pipeline] - Processamento para tabela garantias_seguros finalizado com sucesso
+[2025-03-20 00:35:29,991] [INFO] [pipeline] - Execução do sistema finalizada: 17/17 tabelas processadas com sucesso
+[2025-03-20 00:58:58,481] [INFO] [pipeline] - Iniciando execução do sistema de coleta e processamento de FIDCs
+[2025-03-20 00:58:58,482] [INFO] [pipeline] - Diretórios base criados
+[2025-03-20 00:58:58,492] [INFO] [pipeline] - Iniciando processamento para tabela caracteristicas_fundo
+[2025-03-20 00:58:58,492] [INFO] [collector] - Iniciando coleta de dados para caracteristicas_fundo
+[2025-03-20 00:59:17,874] [INFO] [collector] - Coleta de dados para caracteristicas_fundo finalizada com sucesso
+[2025-03-20 00:59:17,874] [INFO] [processor] - Iniciando processamento de dados para caracteristicas_fundo
+[2025-03-20 00:59:17,874] [INFO] [processor] - Verificando duplicatas para caracteristicas_fundo
+[2025-03-20 00:59:17,951] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para caracteristicas_fundo
+[2025-03-20 00:59:17,956] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para caracteristicas_fundo
+[2025-03-20 00:59:18,324] [INFO] [processor] - Processamento de dados para caracteristicas_fundo finalizado com sucesso
+[2025-03-20 00:59:18,324] [INFO] [processor] - Criando backup para caracteristicas_fundo
+[2025-03-20 00:59:21,965] [INFO] [processor] - Backup para caracteristicas_fundo criado com sucesso
+[2025-03-20 00:59:21,969] [INFO] [database] - Tabela caracteristicas_fundo criada/atualizada no banco de dados
+[2025-03-20 00:59:37,706] [INFO] [database] - Dados deletados e inseridos na tabela caracteristicas_fundo para os meses baixados
+[2025-03-20 00:59:37,706] [INFO] [pipeline] - Processamento para tabela caracteristicas_fundo finalizado com sucesso
+[2025-03-20 00:59:37,732] [INFO] [pipeline] - Iniciando processamento para tabela patrimonio_liquido
+[2025-03-20 00:59:37,732] [INFO] [collector] - Iniciando coleta de dados para patrimonio_liquido
+[2025-03-20 00:59:53,744] [INFO] [collector] - Coleta de dados para patrimonio_liquido finalizada com sucesso
+[2025-03-20 00:59:53,744] [INFO] [processor] - Iniciando processamento de dados para patrimonio_liquido
+[2025-03-20 00:59:53,744] [INFO] [processor] - Verificando duplicatas para patrimonio_liquido
+[2025-03-20 00:59:53,772] [INFO] [processor] - Duplicatas SEM TP_FUNDO_CLASSE removidas para patrimonio_liquido
+[2025-03-20 00:59:53,774] [INFO] [processor] - Tratamento das duplicatas finalizado com sucesso para patrimonio_liquido
+[2025-03-20 00:59:54,187] [INFO] [processor] - Processamento de dados para patrimonio_liquido finalizado com sucesso
+[2025-03-20 00:59:54,187] [INFO] [processor] - Criando backup para patrimonio_liquido
+[2025-03-20 00:59:54,645] [INFO] [processor] - Backup para patrimonio_liquido criado com sucesso
+[2025-03-20 00:59:54,646] [INFO] [database] - Tabela patrimonio_liquido criada/atualizada no banco de dados

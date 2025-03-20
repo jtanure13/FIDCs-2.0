@@ -1,0 +1,104 @@
+[2025-03-19 19:30:55,509] [INFO] [data_collection] - Dados brutos coletados para caracteristicas_fundo: 115033 registros
+[2025-03-19 19:30:55,554] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para caracteristicas_fundo
+[2025-03-19 19:30:55,554] [WARNING] [duplicates] - 22 duplicatas SEM TP_FUNDO_CLASSE detectadas para caracteristicas_fundo
+[2025-03-19 19:30:56,817] [INFO] [data_processing] - Dados processados para caracteristicas_fundo: 115011 registros
+[2025-03-19 19:31:54,628] [INFO] [main] - Dados inseridos em caracteristicas_fundo: 115011 registros
+[2025-03-19 19:32:09,285] [INFO] [data_collection] - Dados brutos coletados para patrimonio_liquido: 114845 registros
+[2025-03-19 19:32:09,378] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para patrimonio_liquido
+[2025-03-19 19:32:09,380] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para patrimonio_liquido
+[2025-03-19 19:32:11,169] [INFO] [data_processing] - Dados processados para patrimonio_liquido: 114831 registros
+[2025-03-19 19:32:20,683] [INFO] [main] - Dados inseridos em patrimonio_liquido: 114831 registros
+[2025-03-19 19:32:40,127] [INFO] [data_collection] - Dados brutos coletados para carteira_ativos: 114068 registros
+[2025-03-19 19:32:40,189] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para carteira_ativos
+[2025-03-19 19:32:40,189] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para carteira_ativos
+[2025-03-19 19:32:41,574] [INFO] [data_processing] - Dados processados para carteira_ativos: 114054 registros
+[2025-03-19 23:58:31,856] [INFO] [data_collection] - Dados brutos coletados para caracteristicas_fundo: 115033 registros
+[2025-03-19 23:58:31,885] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para caracteristicas_fundo
+[2025-03-19 23:58:31,887] [WARNING] [duplicates] - 22 duplicatas SEM TP_FUNDO_CLASSE detectadas para caracteristicas_fundo
+[2025-03-19 23:58:32,466] [INFO] [data_processing] - Dados processados para caracteristicas_fundo: 115011 registros
+[2025-03-19 23:58:55,738] [INFO] [main] - Dados inseridos em caracteristicas_fundo: 115011 registros
+[2025-03-19 23:59:22,790] [INFO] [data_collection] - Dados brutos coletados para patrimonio_liquido: 114845 registros
+[2025-03-19 23:59:22,823] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para patrimonio_liquido
+[2025-03-19 23:59:22,823] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para patrimonio_liquido
+[2025-03-19 23:59:23,371] [INFO] [data_processing] - Dados processados para patrimonio_liquido: 114831 registros
+[2025-03-19 23:59:28,893] [INFO] [main] - Dados inseridos em patrimonio_liquido: 114831 registros
+[2025-03-19 23:59:56,259] [INFO] [data_collection] - Dados brutos coletados para carteira_ativos: 114068 registros
+[2025-03-19 23:59:56,279] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para carteira_ativos
+[2025-03-19 23:59:56,280] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para carteira_ativos
+[2025-03-19 23:59:56,807] [INFO] [data_processing] - Dados processados para carteira_ativos: 114054 registros
+[2025-03-20 00:00:02,863] [INFO] [main] - Dados inseridos em carteira_ativos: 114054 registros
+[2025-03-20 00:00:30,247] [INFO] [data_collection] - Dados brutos coletados para passivos_derivativos: 114793 registros
+[2025-03-20 00:00:30,273] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para passivos_derivativos
+[2025-03-20 00:00:30,274] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para passivos_derivativos
+[2025-03-20 00:00:30,828] [INFO] [data_processing] - Dados processados para passivos_derivativos: 114779 registros
+[2025-03-20 00:00:35,303] [INFO] [main] - Dados inseridos em passivos_derivativos: 114779 registros
+[2025-03-20 00:01:04,998] [INFO] [data_collection] - Dados brutos coletados para prazos_creditos: 113660 registros
+[2025-03-20 00:01:05,027] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para prazos_creditos
+[2025-03-20 00:01:05,027] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para prazos_creditos
+[2025-03-20 00:01:05,577] [INFO] [data_processing] - Dados processados para prazos_creditos: 113646 registros
+[2025-03-20 00:01:12,361] [INFO] [main] - Dados inseridos em prazos_creditos: 113646 registros
+[2025-03-20 00:01:41,061] [INFO] [data_collection] - Dados brutos coletados para inadimplencia: 111240 registros
+[2025-03-20 00:01:41,086] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para inadimplencia
+[2025-03-20 00:01:41,088] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para inadimplencia
+[2025-03-20 00:01:41,626] [INFO] [data_processing] - Dados processados para inadimplencia: 111226 registros
+[2025-03-20 00:01:47,956] [INFO] [main] - Dados inseridos em inadimplencia: 111226 registros
+[2025-03-20 00:02:15,800] [INFO] [data_collection] - Dados brutos coletados para cedentes_tomadores: 115029 registros
+[2025-03-20 00:02:15,824] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para cedentes_tomadores
+[2025-03-20 00:02:15,825] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para cedentes_tomadores
+[2025-03-20 00:02:16,388] [INFO] [data_processing] - Dados processados para cedentes_tomadores: 115015 registros
+[2025-03-20 00:02:21,838] [INFO] [main] - Dados inseridos em cedentes_tomadores: 115015 registros
+[2025-03-20 00:02:55,140] [INFO] [data_collection] - Dados brutos coletados para precos_mercado: 111127 registros
+[2025-03-20 00:02:55,164] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para precos_mercado
+[2025-03-20 00:02:55,165] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para precos_mercado
+[2025-03-20 00:02:55,752] [INFO] [data_processing] - Dados processados para precos_mercado: 111113 registros
+[2025-03-20 00:03:04,725] [INFO] [main] - Dados inseridos em precos_mercado: 111113 registros
+[2025-03-20 00:03:31,656] [INFO] [data_collection] - Dados brutos coletados para risco_credito: 45796 registros
+[2025-03-20 00:03:31,671] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para risco_credito
+[2025-03-20 00:03:31,671] [WARNING] [duplicates] - 12 duplicatas SEM TP_FUNDO_CLASSE detectadas para risco_credito
+[2025-03-20 00:03:31,907] [INFO] [data_processing] - Dados processados para risco_credito: 45784 registros
+[2025-03-20 00:03:32,771] [INFO] [main] - Dados inseridos em risco_credito: 45784 registros
+[2025-03-20 00:03:59,894] [INFO] [data_collection] - Dados brutos coletados para classes_cotistas: 360016 registros
+[2025-03-20 00:03:59,979] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para classes_cotistas
+[2025-03-20 00:03:59,979] [WARNING] [duplicates] - 563 duplicatas SEM TP_FUNDO_CLASSE detectadas para classes_cotistas
+[2025-03-20 00:04:00,051] [WARNING] [duplicates] - 188 CNPJs com duplicatas para classes_cotistas. Dentro do limite - seguimos.
+[2025-03-20 00:04:01,680] [INFO] [data_processing] - Dados processados para classes_cotistas: 357319 registros
+[2025-03-20 00:04:12,890] [INFO] [main] - Dados inseridos em classes_cotistas: 357319 registros
+[2025-03-20 00:04:38,419] [INFO] [data_collection] - Dados brutos coletados para distribuicao_cotistas: 115029 registros
+[2025-03-20 00:04:38,444] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para distribuicao_cotistas
+[2025-03-20 00:04:38,444] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para distribuicao_cotistas
+[2025-03-20 00:04:38,985] [INFO] [data_processing] - Dados processados para distribuicao_cotistas: 115015 registros
+[2025-03-20 00:04:43,808] [INFO] [main] - Dados inseridos em distribuicao_cotistas: 115015 registros
+[2025-03-20 00:05:10,846] [INFO] [data_collection] - Dados brutos coletados para cotas_valores: 333188 registros
+[2025-03-20 00:05:10,922] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para cotas_valores
+[2025-03-20 00:05:10,923] [WARNING] [duplicates] - 374 duplicatas SEM TP_FUNDO_CLASSE detectadas para cotas_valores
+[2025-03-20 00:05:10,979] [WARNING] [duplicates] - 197 CNPJs com duplicatas para cotas_valores. Dentro do limite - seguimos.
+[2025-03-20 00:05:12,494] [INFO] [data_processing] - Dados processados para cotas_valores: 330673 registros
+[2025-03-20 00:05:23,649] [INFO] [main] - Dados inseridos em cotas_valores: 330673 registros
+[2025-03-20 00:05:49,582] [INFO] [data_collection] - Dados brutos coletados para rentabilidade: 357988 registros
+[2025-03-20 00:05:49,661] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para rentabilidade
+[2025-03-20 00:05:49,662] [WARNING] [duplicates] - 297 duplicatas SEM TP_FUNDO_CLASSE detectadas para rentabilidade
+[2025-03-20 00:05:49,721] [WARNING] [duplicates] - 212 CNPJs com duplicatas para rentabilidade. Dentro do limite - seguimos.
+[2025-03-20 00:05:51,332] [INFO] [data_processing] - Dados processados para rentabilidade: 355438 registros
+[2025-03-20 00:06:03,073] [INFO] [main] - Dados inseridos em rentabilidade: 355438 registros
+[2025-03-20 00:06:34,546] [INFO] [data_collection] - Dados brutos coletados para operacoes_estruturadas: 1244918 registros
+[2025-03-20 00:06:34,915] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para operacoes_estruturadas
+[2025-03-20 00:06:34,916] [WARNING] [duplicates] - 893 duplicatas SEM TP_FUNDO_CLASSE detectadas para operacoes_estruturadas
+[2025-03-20 00:06:35,144] [WARNING] [duplicates] - 208 CNPJs com duplicatas para operacoes_estruturadas. Dentro do limite - seguimos.
+[2025-03-20 00:06:40,722] [INFO] [data_processing] - Dados processados para operacoes_estruturadas: 1236012 registros
+[2025-03-20 00:07:22,353] [INFO] [main] - Dados inseridos em operacoes_estruturadas: 1236012 registros
+[2025-03-20 00:07:47,294] [INFO] [data_collection] - Dados brutos coletados para liquidez_ativos: 112474 registros
+[2025-03-20 00:07:47,327] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para liquidez_ativos
+[2025-03-20 00:07:47,327] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para liquidez_ativos
+[2025-03-20 00:07:47,821] [INFO] [data_processing] - Dados processados para liquidez_ativos: 112460 registros
+[2025-03-20 00:07:51,661] [INFO] [main] - Dados inseridos em liquidez_ativos: 112460 registros
+[2025-03-20 00:08:18,630] [INFO] [data_collection] - Dados brutos coletados para performance_fundo: 316407 registros
+[2025-03-20 00:08:18,700] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para performance_fundo
+[2025-03-20 00:08:18,701] [WARNING] [duplicates] - 283 duplicatas SEM TP_FUNDO_CLASSE detectadas para performance_fundo
+[2025-03-20 00:08:18,751] [WARNING] [duplicates] - 203 CNPJs com duplicatas para performance_fundo. Dentro do limite - seguimos.
+[2025-03-20 00:08:20,162] [INFO] [data_processing] - Dados processados para performance_fundo: 314021 registros
+[2025-03-20 00:08:30,340] [INFO] [main] - Dados inseridos em performance_fundo: 314021 registros
+[2025-03-20 00:08:55,311] [INFO] [data_collection] - Dados brutos coletados para garantias_seguros: 115045 registros
+[2025-03-20 00:08:55,332] [WARNING] [duplicates] - Duplicatas detectadas nas chaves primárias para garantias_seguros
+[2025-03-20 00:08:55,333] [WARNING] [duplicates] - 14 duplicatas SEM TP_FUNDO_CLASSE detectadas para garantias_seguros
+[2025-03-20 00:08:55,829] [INFO] [data_processing] - Dados processados para garantias_seguros: 115031 registros
+[2025-03-20 00:08:59,161] [INFO] [main] - Dados inseridos em garantias_seguros: 115031 registros
